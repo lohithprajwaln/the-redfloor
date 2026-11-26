@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE RED FLOOR | Kodi Beach, Kundapura | Luxury Homestay</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- AOS Animation Library CDN -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            red: '#8A1C14',
+                            darkred: '#5C100B',
+                            lightred: '#FDF2F1',
+                            cream: '#FAF8F5',
+                            dark: '#1C1917',
+                            sand: '#E6DFD5'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-nav {
+            background: rgba(28, 25, 23, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        .hero-gradient {
+            background: linear-gradient(180deg, rgba(28,25,23,0.4) 0%, rgba(28,25,23,0.7) 100%);
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FAF8F5;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #8A1C14;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-brand-cream text-brand-dark font-sans antialiased selection:bg-brand-red selection:text-white">
+
+    <!-- Navigation Bar -->
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
+            <a href="#" class="font-serif text-2xl md:text-3xl font-bold tracking-wider text-white uppercase flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-brand-red inline-block"></span>
+                The Red Floor
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-white tracking-wide">
+                <a href="#about" class="hover:text-brand-lightred transition-colors">The Experience</a>
+                <a href="#rooms" class="hover:text-brand-lightred transition-colors">The Rooms</a>
+                <a href="#gallery" class="hover:text-brand-lightred transition-colors">Gallery</a>
+                <a href="#activities" class="hover:text-brand-lightred transition-colors">Local Guide</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <a href="tel:+919483653671" class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white text-sm font-semibold px-5 py-3 rounded-full transition-all border border-white/20 hidden sm:block">
+                    <i class="fa-solid fa-phone-alt mr-2"></i> +91 9483653671
+                </a>
+                <a href="#booking" class="bg-brand-red hover:bg-brand-darkred text-white text-sm font-semibold px-6 py-3 rounded-full transition-all shadow-lg hover:shadow-brand-red/30">
+                    Book Now
+                </a>
+                <button id="mobile-menu-btn" class="md:hidden text-white text-2xl focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden glass-nav absolute top-24 left-0 w-full py-6 px-8 border-t border-white/10 flex flex-col gap-4 text-white">
+            <a href="#about" class="mobile-link text-lg font-medium">The Experience</a>
+            <a href="#rooms" class="mobile-link text-lg font-medium">The Rooms</a>
+            <a href="#gallery" class="mobile-link text-lg font-medium">Gallery</a>
+            <a href="#activities" class="mobile-link text-lg font-medium">Local Guide</a>
+            <a href="tel:+919483653671" class="text-lg font-medium text-brand-sand"><i class="fa-solid fa-phone-alt mr-2"></i> Call: 9483653671</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <!-- USER IMAGE 1 (HERO) -->
+            <img src="hero.jpeg" alt="The Red Floor Homestay exterior courtyard" class="w-full h-full object-cover scale-105">
+            <div class="absolute inset-0 hero-gradient"></div>
+        </div>
+
+        <div class="relative z-10 text-center max-w-4xl mx-auto px-6 mt-16" data-aos="fade-up" data-aos-duration="1000">
+            <span class="text-brand-sand uppercase tracking-[0.3em] text-xs font-semibold mb-4 block">0.5km from Kodi Beach, Kundapura</span>
+            <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
+                Your Coastal Sanctuary <span class="italic font-normal text-brand-sand">In Kundapura, Karnataka.</span>
+            </h1>
+            <p class="text-gray-200 text-base sm:text-lg max-w-2xl mx-auto font-light mb-10 leading-relaxed">
+                Experience the charm of Karnataka's coast at The Red Floor. Unwind in heritage luxury, just moments away from the serene Kodi Sea Walk and pristine beaches.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#booking" class="w-full sm:w-auto bg-brand-red hover:bg-brand-darkred text-white font-medium px-8 py-4 rounded-full transition-all shadow-xl">
+                    Check Availability
+                </a>
+                <a href="#about" class="w-full sm:w-auto bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/20 font-medium px-8 py-4 rounded-full transition-all">
+                    Learn More
+                </a>
+            </div>
+        </div>
+
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 hidden sm:flex flex-col items-center gap-2 text-white/70 animate-bounce">
+            <span class="text-xs uppercase tracking-widest font-light">Scroll</span>
+            <i class="fa-solid fa-chevron-down text-xs"></i>
+        </div>
+    </section>
+
+    <!-- Quick Booking Bar Widget -->
+    <section class="relative z-20 max-w-5xl mx-auto px-6 -mt-16 sm:-mt-12">
+        <div class="glass-card rounded-2xl p-6 sm:p-8 shadow-2xl border border-white/40">
+            <form id="quick-booking-form" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-end">
+                <div>
+                    <label class="block text-xs font-semibold uppercase tracking-wider text-brand-dark mb-2">Check-In</label>
+                    <input type="date" id="quick-checkin" required class="w-full bg-white/80 border border-brand-sand rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-red">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold uppercase tracking-wider text-brand-dark mb-2">Check-Out</label>
+                    <input type="date" id="quick-checkout" required class="w-full bg-white/80 border border-brand-sand rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-red">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold uppercase tracking-wider text-brand-dark mb-2">Guests</label>
+                    <select id="quick-guests" class="w-full bg-white/80 border border-brand-sand rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-red">
+                        <option value="1">1 Guest</option>
+                        <option value="2" selected>2 Guests</option>
+                        <option value="3">3 Guests</option>
+                        <option value="4">4+ Guests</option>
+                    </select>
+                </div>
+                <div>
+                    <button type="submit" class="w-full bg-brand-dark hover:bg-brand-red text-white font-medium py-3 rounded-xl transition-all shadow-md text-sm">
+                        Book Now
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section id="about" class="py-24 sm:py-32 max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div data-aos="fade-right" data-aos-duration="1000">
+                <span class="text-brand-red font-semibold text-xs tracking-[0.25em] uppercase mb-3 block">Coastal Serenity</span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-bold tracking-tight mb-6 leading-tight">
+                    A Heritage Haven on earth, Minutes from Kodi Beach
+                </h2>
+                <p class="text-gray-600 font-light leading-relaxed mb-6">
+                    Located just 0.5km from the calming shores of Kodi Beach in Kundapura, The Red Floor offers an intimate escape into coastal Karnataka. Our homestay is named after its distinctive, hand-polished rust-red oxide floors, blending traditional aesthetics with modern comforts.
+                </p>
+                <p class="text-gray-600 font-light leading-relaxed mb-8">
+                    Hosted by Javaresh, we invite you to embrace slow living. Relax in our lush courtyards, enjoy authentic local flavors, and create memories by the Arabian Sea.
+                </p>
+                
+                <div class="grid grid-cols-2 gap-6 pt-4 border-t border-brand-sand">
+                    <div>
+                        <h4 class="font-serif text-3xl font-bold text-brand-red mb-1">0.5 km</h4>
+                        <p class="text-xs text-gray-500 uppercase tracking-wider">To Kodi Beach & Sea Walk</p>
+                    </div>
+                    <div>
+                        <h4 class="font-serif text-3xl font-bold text-brand-red mb-1">Private</h4>
+                        <p class="text-xs text-gray-500 uppercase tracking-wider">Full Cozy Experience</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4 relative" data-aos="fade-left" data-aos-duration="1000">
+                <div class="space-y-4">
+                    <!-- USER IMAGE 2 (PRIVATE SUITE) -->
+                    <img src="WhatsApp Image 2026-08-05 at 7.01.53 PM (1).jpeg" alt="Cozy living area detail" class="rounded-2xl shadow-lg w-full h-64 object-cover">
+                    <!-- USER IMAGE 3 (PRIVATE SUITE) -->
+                    <img src="WhatsApp Image 2026-08-05 at 7.01.51 PM (1).jpeg" alt="Suite entrance from courtyard" class="rounded-2xl shadow-lg w-full h-48 object-cover">
+                </div>
+                <div class="space-y-4 pt-8">
+                    <!-- USER IMAGE 4 (PRIVATE SUITE) -->
+                    <img src="WhatsApp Image 2026-08-05 at 7.01.53 PM (2).jpeg" alt="Spacious bedroom" class="rounded-2xl shadow-lg w-full h-48 object-cover">
+                    <!-- USER IMAGE 5 (PRIVATE SUITE) -->
+                    <img src="WhatsApp Image 2026-08-05 at 7.01.53 PM.jpeg" alt="Modern bathroom detail" class="rounded-2xl shadow-lg w-full h-64 object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Room Section (Single Type) -->
+    <section id="rooms" class="bg-brand-sand/40 py-24 sm:py-32">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+                <span class="text-brand-red font-semibold text-xs tracking-[0.25em] uppercase mb-3 block">Accommodation</span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-bold tracking-tight mb-4">
+                    The Red Floor Rooms
+                </h2>
+                <p class="text-gray-600 font-light">An exclusive, private stay designed for comfort, featuring traditional aesthetics and modern amenities.</p>
+            </div>
+
+            <div class="max-w-lg mx-auto">
+                <!-- Single Room Card -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-xl border border-brand-sand/60 flex flex-col transition-all hover:-translate-y-1 duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative h-80 overflow-hidden">
+                        <!-- USER IMAGE 6 (SIGNATURE SUITE) -->
+                        <img src="WhatsApp Image 2026-08-05 at 7.01.53 PM.jpeg" alt="The Red Floor Homestay Signature Suite" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+                        <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-md text-brand-dark text-xs font-semibold px-3.5 py-1.5 rounded-full shadow">From ₹5,000</span>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="font-serif text
+                        2ds font-bold mb-2">Signature Room Stay</h3>
+                        <p class="text-gray-600 text-sm font-light mb-6 flex-grow">Enjoy our beautifully appointed private rooms featuring custom teak wood furniture, premium King-size bedding, signature red oxide flooring, and a tranquil garden view.</p>
+                        <div class="flex items-center justify-between text-xs text-gray-500 mb-6 pb-6 border-b border-gray-100">
+                            <span><i class="fa-solid fa-user-group text-brand-red mr-1"></i> Up to 4+ Guests</span>
+                            <span><i class="fa-solid fa-bed text-brand-red mr-1"></i> King Bed + Extra Beds</span>
+                            <span><i class="fa-solid fa-wifi text-brand-red mr-1"></i> High-Speed Wi-Fi</span>
+                        </div>
+                        <button onclick="document.getElementById('booking').scrollIntoView({behavior: 'smooth'})" class="w-full bg-brand-lightred hover:bg-brand-red text-brand-red hover:text-white font-medium py-3 rounded-xl transition-all text-sm">
+                            Book This Room
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Gallery Section (Static) -->
+    <section id="gallery" class="py-24 sm:py-32 max-w-7xl mx-auto px-6">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4" data-aos="fade-up">
+            <div>
+                <span class="text-brand-red font-semibold text-xs tracking-[0.25em] uppercase mb-3 block">Visual Journey</span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-bold tracking-tight">Moments at The Red Floor</h2>
+            </div>
+        </div>
+
+        <!-- Static Gallery Grid (Images 7, 8, 9) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" data-aos="fade-up">
+            <!-- USER IMAGE 7 (COZY CORNER) -->
+            <div class="gallery-item overflow-hidden rounded-2xl shadow-md h-72 group relative">
+                <img src="WhatsApp Image 2026-08-05 at 7.01.52 PM.jpeg" alt="Cozy corner" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/70 to-transparent p-4 text-white font-serif text-sm">Cozy Corner</div>
+            </div>
+            <!-- USER IMAGE 8 (VERANDAH VIEW) -->
+            <div class="gallery-item overflow-hidden rounded-2xl shadow-md h-72 group relative">
+                <img src="WhatsApp Image 2026-08-05 at 7.01.53 PM (2).jpeg" alt="Verandah view" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/70 to-transparent p-4 text-white font-serif text-sm">Verandah View</div>
+            </div>
+            <!-- USER IMAGE 9 (LUXURY BATHROOM) -->
+            <div class="gallery-item overflow-hidden rounded-2xl shadow-md h-72 group relative">
+                <img src="WhatsApp Image 2026-08-05 at 7.01.50 PM.jpeg" alt="Luxury bathroom" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/70 to-transparent p-4 text-white font-serif text-sm">Bathroom</div>
+            </div>
+        </div>
+        <p class="text-center text-gray-500 text-sm mt-10 font-light">For A Good Day</p>
+    </section>
+
+    <!-- Local Activity Guide Section -->
+    <section id="activities" class="bg-brand-dark text-white py-24 sm:py-32 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+                <span class="text-brand-sand font-semibold text-xs tracking-[0.25em] uppercase mb-3 block">Explore Kundapura</span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-bold tracking-tight mb-4">
+                    Attractions Near Kodi Beach
+                </h2>
+                <p class="text-gray-300 font-light">From tranquil sea walks to historic temples, discover the best of the coast just moments from The Red Floor.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Activity 1 (USER IMAGE 10: KODI SEA WALK) -->
+                <div class="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-md group hover:bg-white/10 transition-all duration-300 flex flex-col" data-aos="fade-up" data-aos-delay="100">
+                    <img src="wctuzoud8ah71.png" alt="Kodi Sea Walk" class="w-full h-48 object-cover rounded-2xl mb-6 grayscale group-hover:grayscale-0 transition-all">
+                    <h3 class="font-serif text-2xl font-bold mb-3">Kodi Sea Walk & Delta Point</h3>
+                    <p class="text-gray-300 text-sm font-light mb-6 flex-grow">A stunning pedestrian walkway where the river meets the Arabian Sea. Perfect for evening strolls, sunset views, and dolphin spotting.</p>
+                    <span class="text-brand-sand text-xs tracking-wider uppercase font-semibold flex items-center gap-2">
+                        <i class="fa-solid fa-location-dot"></i> 0.5 km (5 min walk)
+                    </span>
+                </div>
+
+                <!-- Activity 2 -->
+                <div class="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-md group hover:bg-white/10 transition-all duration-300 flex flex-col" data-aos="fade-up" data-aos-delay="200">
+                    <img src="kundapura-lighthouse.png" alt="Coastal Lighthouse" class="w-full h-48 object-cover rounded-2xl mb-6 grayscale group-hover:grayscale-0 transition-all">
+                    <h3 class="font-serif text-2xl font-bold mb-3">Kodi Lighthouse</h3>
+                    <p class="text-gray-300 text-sm font-light mb-6 flex-grow">Historic lighthouse offering panoramic views of the coastline and backwaters. A must-visit for photography enthusiasts.</p>
+                    <span class="text-brand-sand text-xs tracking-wider uppercase font-semibold flex items-center gap-2">
+                        <i class="fa-solid fa-location-dot"></i> 1 km down the coast
+                    </span>
+                </div>
+
+                <!-- Activity 3 -->
+                <div class="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-md group hover:bg-white/10 transition-all duration-300 flex flex-col" data-aos="fade-up" data-aos-delay="300">
+                    <img src="1703152946543.png" alt="Maravanthe Beach" class="w-full h-48 object-cover rounded-2xl mb-6 grayscale group-hover:grayscale-0 transition-all">
+                    <h3 class="font-serif text-2xl font-bold mb-3">Maravanthe Beach</h3>
+                    <p class="text-gray-300 text-sm font-light mb-6 flex-grow">Famous scenic highway where the Suparnika River flows on one side and the Arabian Sea on the other. breathtaking drive.</p>
+                    <span class="text-brand-sand text-xs tracking-wider uppercase font-semibold flex items-center gap-2">
+                        <i class="fa-solid fa-location-dot"></i> 15-20 min drive North
+                    </span>
+                </div>
+
+                 <!-- Activity 4 -->
+                <div class="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-md group hover:bg-white/10 transition-all duration-300 flex flex-col md:col-span-2" data-aos="fade-up" data-aos-delay="100">
+                    <img src="Title-Mandrove-Backwaters-Kayaking-Tamilnadu.jpg" alt="Backwater Mangroves" class="w-full h-64 object-cover rounded-2xl mb-6 grayscale group-hover:grayscale-0 transition-all">
+                    <h3 class="font-serif text-2xl font-bold mb-3">Backwater Mangrove Forests</h3>
+                    <p class="text-gray-300 text-sm font-light mb-6 flex-grow">Explore the serene beauty of the Kodi backwaters via local boat rides. Ideal for bird watching, kayaking, and peaceful nature photography.</p>
+                    <span class="text-brand-sand text-xs tracking-wider uppercase font-semibold flex items-center gap-2">
+                        <i class="fa-solid fa-location-dot"></i> Accessible near Delta Point
+                    </span>
+                </div>
+
+                <!-- Activity 5 -->
+                <div class="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-md group hover:bg-white/10 transition-all duration-300 flex flex-col" data-aos="fade-up" data-aos-delay="200">
+                     <img src="20191118-103815-largejpg.jpg" alt="Anegudde Temple" class="w-full h-48 object-cover rounded-2xl mb-6 grayscale group-hover:grayscale-0 transition-all">
+                    <h3 class="font-serif text-2xl font-bold mb-3">Anegudde Vinayaka Temple</h3>
+                    <p class="text-gray-300 text-sm font-light mb-6 flex-grow">One of the most ancient and revered temples in the region, dedicated to Lord Ganesha, situated on a small hillock.</p>
+                    <span class="text-brand-sand text-xs tracking-wider uppercase font-semibold flex items-center gap-2">
+                        <i class="fa-solid fa-location-dot"></i> 15 min drive inland
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking & Contact Section -->
+    <section id="booking" class="py-24 sm:py-32 max-w-5xl mx-auto px-6">
+        <div class="bg-white rounded-3xl shadow-2xl border border-brand-sand overflow-hidden p-8 sm:p-12" data-aos="fade-up">
+            <div class="text-center max-w-xl mx-auto mb-12">
+                <span class="text-brand-red font-semibold text-xs tracking-[0.25em] uppercase mb-2 block">Book Your Stay</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold mb-3">Reserve Directly with Javaresh</h2>
+                <p class="text-gray-600 text-sm font-light">Fill out the details below to send a booking request via WhatsApp or give us a call. Pricing depends on guest count.</p>
+            </div>
+
+            <form id="main-booking-form" class="space-y-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-brand-dark mb-2">Your Name</label>
+                        <input type="text" id="guest-name" required placeholder="John Doe" class="w-full bg-brand-cream/50 border border-brand-sand rounded-xl px-4 py-3.5 text-sm focus:outline-none focus:border-brand-red">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-brand-dark mb-2">Email Address</label>
+                        <input type="email" id="guest-email" required placeholder="john@example.com" class="w-full bg-brand-cream/50 border border-brand-sand rounded-xl px-4 py-3.5 text-sm focus:outline-none focus:border-brand-red">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-brand-dark mb-2">Check-In Date</label>
+                        <input type="date" id="checkin-date" required class="w-full bg-brand-cream/50 border border-brand-sand rounded-xl px-4 py-3.5 text-sm focus:outline-none focus:border-brand-red">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-brand-dark mb-2">Check-Out Date</label>
+                        <input type="date" id="checkout-date" required class="w-full bg-brand-cream/50 border border-brand-sand rounded-xl px-4 py-3.5 text-sm focus:outline-none focus:border-brand-red">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-brand-dark mb-2">Total Guests</label>
+                        <select id="guest-count" class="w-full bg-brand-cream/50 border border-brand-sand rounded-xl px-4 py-3.5 text-sm focus:outline-none focus:border-brand-red">
+                            <option value="1">1 Guest (₹5,000)</option>
+                            <option value="2" selected>2 Guests (₹5,000)</option>
+                            <option value="3">3 Guests (₹6,000)</option>
+                            <option value="4">4+ Guests (₹7,500+)</option>
+                        </select>
+                        <p class="text-xs text-gray-500 mt-1">Base price covers up to 2 guests.</p>
+                    </div>
+                </div>
+
+                <!-- Live Price Calculation Box -->
+                <div id="price-calculator" class="bg-brand-lightred/60 border border-brand-red/20 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <div>
+                        <h4 class="font-serif font-bold text-lg text-brand-darkred">Estimated Total</h4>
+                        <p id="price-breakdown" class="text-xs text-gray-600">₹5,000 x 1 night</p>
+                    </div>
+                    <div class="text-right">
+                        <span id="total-price-display" class="font-serif text-3xl font-bold text-brand-red">₹5,000</span>
+                        <span class="block text-xs text-gray-500 font-light">for <span id="nights-count">1</span> night(s)</span>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+                    <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white font-medium px-8 py-4 rounded-xl transition-all shadow-md text-base flex items-center justify-center gap-3">
+                        <i class="fa-brands fa-whatsapp text-xl"></i> Request Booking via WhatsApp
+                    </button>
+                    <a href="tel:+919483653671" class="w-full bg-brand-dark hover:bg-brand-red text-white font-medium px-8 py-4 rounded-xl transition-all shadow-md text-base flex items-center justify-center gap-3">
+                        <i class="fa-solid fa-phone"></i> Call Host to Book
+                    </a>
+                </div>
+                 <p class="text-center text-xs text-gray-500 mt-4">Note: This is a booking request. Javaresh will confirm availability and total price via WhatsApp.</p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-white pt-20 pb-12 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+            <div class="md:col-span-1">
+                <a href="#" class="font-serif text-2xl font-bold tracking-wider uppercase flex items-center gap-2 mb-4">
+                    <span class="w-3 h-3 rounded-full bg-brand-red inline-block"></span>
+                    The Red Floor
+                </a>
+                <p class="text-gray-400 text-sm font-light leading-relaxed">
+                    A heritage luxury homestay offering an authentic coastal experience near Kodi Beach, Kundapura.
+                </p>
+            </div>
+            <div>
+                <h4 class="font-serif font-semibold text-base mb-4 text-brand-sand">Quick Links</h4>
+                <ul class="space-y-2.5 text-sm text-gray-400 font-light">
+                    <li><a href="#about" class="hover:text-white transition-colors">The Experience</a></li>
+                    <li><a href="#rooms" class="hover:text-white transition-colors">The Rooms</a></li>
+                    <li><a href="#gallery" class="hover:text-white transition-colors">Gallery</a></li>
+                    <li><a href="#activities" class="hover:text-white transition-colors">Local Guide</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-serif font-semibold text-base mb-4 text-brand-sand">Contact Host</h4>
+                <ul class="space-y-2.5 text-sm text-gray-400 font-light">
+                    <li><i class="fa-solid fa-user text-brand-red mr-2"></i> Javaresh</li>
+                    <li><i class="fa-solid fa-location-dot text-brand-red mr-2"></i> Kodi Beach Road, Kundapura</li>
+                    <li><a href="mailto:stay@theredfloor.com" class="hover:text-white"><i class="fa-solid fa-envelope text-brand-red mr-2"></i> stay@theredfloor.com</a></li>
+                    <li><a href="tel:+917406891703" class="hover:text-white"><i class="fa-solid fa-phone text-brand-red mr-2"></i> +91 7406891703</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-serif font-semibold text-base mb-4 text-brand-sand">Location</h4>
+                <div class="aspect-video rounded-xl overflow-hidden border border-white/10 shadow-lg">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3882.2566396025896!2d74.68112947507482!3d13.647337401533735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbcadf6266f97e7%3A0x38339e74208a8413!2sKodi%20Beach%20Rd%2C%20Kundapura%2C%20Karnataka!5e0!3m2!1en!2sin!3m2!1en!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 pt-8 border-t border-white/10 text-center text-xs text-gray-500">
+            <p>&copy; 2026 The Red Floor Homestay. All rights reserved.</p>
+            <p class="mt-1">Hosted with ♥ by Javaresh</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+        // Initialize AOS
+        AOS.init({ once: true, offset: 50, duration: 800 });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) { navbar.classList.add('glass-nav', 'shadow-lg'); } 
+            else { navbar.classList.remove('glass-nav', 'shadow-lg'); }
+        });
+
+        // Mobile menu
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+        document.querySelectorAll('.mobile-link').forEach(link => link.addEventListener('click', () => menu.classList.add('hidden')));
+
+        // Booking Form Logic
+        const checkinInput = document.getElementById('checkin-date');
+        const checkoutInput = document.getElementById('checkout-date');
+        const guestCountSelect = document.getElementById('guest-count');
+        const totalPriceDisplay = document.getElementById('total-price-display');
+        const nightsCountDisplay = document.getElementById('nights-count');
+        const priceBreakdownDisplay = document.getElementById('price-breakdown');
+
+        // Set default dates (Tomorrow to Day After)
+        const tomorrow = new Date(); tomorrow.setDate(tomorrow.getDate() + 1);
+        const dayAfter = new Date(); dayAfter.setDate(dayAfter.getDate() + 2);
+        const formatDate = (d) => d.toISOString().split('T')[0];
+        checkinInput.value = formatDate(tomorrow);
+        checkoutInput.value = formatDate(dayAfter);
+        
+        // Sync quick booking form
+        document.getElementById('quick-booking-form').addEventListener('submit', function(e){
+            e.preventDefault();
+            checkinInput.value = document.getElementById('quick-checkin').value;
+            checkoutInput.value = document.getElementById('quick-checkout').value;
+            guestCountSelect.value = document.getElementById('quick-guests').value;
+            document.getElementById('booking').scrollIntoView({behavior: 'smooth'});
+            calculatePrice();
+        });
+
+        // Price Tiers based on guest count per night
+        const priceTiers = {
+            "1": 5000,
+            "2": 5000,
+            "3": 6000,
+            "4": 7500
+        };
+
+        function calculatePrice() {
+            const ci = new Date(checkinInput.value);
+            const co = new Date(checkoutInput.value);
+            let nights = Math.ceil((co - ci) / (1000 * 60 * 60 * 24));
+            
+            if (isNaN(nights) || nights <= 0) nights = 1;
+            
+            const guests = guestCountSelect.value;
+            const pricePerNight = priceTiers[guests];
+            const total = nights * pricePerNight;
+            
+            nightsCountDisplay.textContent = nights;
+            priceBreakdownDisplay.textContent = `₹${pricePerNight.toLocaleString('en-IN')} x ${nights} night(s)`;
+            totalPriceDisplay.textContent = '₹' + total.toLocaleString('en-IN');
+        }
+
+        checkinInput.addEventListener('change', calculatePrice);
+        checkoutInput.addEventListener('change', calculatePrice);
+        guestCountSelect.addEventListener('change', calculatePrice);
+        calculatePrice();
+
+        // WhatsApp Submission
+        document.getElementById('main-booking-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('guest-name').value;
+            const email = document.getElementById('guest-email').value;
+            const ci = checkinInput.value;
+            const co = checkoutInput.value;
+            const guestsText = guestCountSelect.options[guestCountSelect.selectedIndex].text;
+            const total = totalPriceDisplay.textContent;
+            const hostPhone = "919483653671";
+
+            const msg = `*New Booking Request from Web*:\nName: ${name}\nEmail: ${email}\nCheck-In: ${ci}\nCheck-Out: ${co}\nGuests: ${guestsText}\nEst. Total: ${total}`;
+            window.open(`https://wa.me/${hostPhone}?text=${encodeURIComponent(msg)}`, '_blank');
+        });
+    </script>
+</body>
+</html>
